@@ -12,4 +12,5 @@ This collection including 8 common Algorithm by using JavaScript
 7. Counting & Redix
 8. Heap
 
-If you have better thought or solution for specific Sorting Algorithm, please let me know :)
+View performance in console.
+Feel free to let me know if you have better thought or solution for specific Sorting Algorithm :)
