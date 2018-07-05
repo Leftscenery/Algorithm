@@ -1,5 +1,5 @@
-# Algorithm
-Algorithm using Javascript
+# Sorting Algorithm
+Sorting Algorithm by using Javascript
 
 This collection including 8 common Algorithm by using JavaScript
 
