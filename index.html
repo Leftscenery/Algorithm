@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/1_冒泡排序.js"></script>
+    <script src="js/2_选择排序.js"></script>
+    <script src="js/3_插入排序.js"></script>
+    <script src="js/4_希尔排序.js"></script>
+    <script src="js/5_归并排序.js"></script>
+    <script src="js/6_快速排序.js"></script>
+    <script src="js/7_计数排序_基数排序.js"></script>
+    <script src="js/8_堆排序.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    var GetNewAry = (function (n) {
+        let ary = [];
+        for (let i = 0; i < n; i++) {
+            ary.push(Math.floor(Math.random() * n) + 1)
+        }
+        return function(){
+            return [...ary]
+        }
+    }(10000));
+
+
+    console.log(BubbleSort(GetNewAry()));
+    console.log(selectionSort1(GetNewAry()));
+    console.log(selectionSort2(GetNewAry()));
+    console.log(insertSort(GetNewAry()));
+    console.log(directInsertSort(GetNewAry()));
+    console.log(mergeSort(GetNewAry()));
+    console.log(shellSort(GetNewAry()));
+    console.log(quickSort1(GetNewAry()));
+    console.log(quickSort2(GetNewAry()));
+    console.log(quickSort3(GetNewAry()));
+    console.log(randomQuickSort(GetNewAry()));
+    console.log(countingSort(GetNewAry()));
+    console.log(redixSorting(GetNewAry()));
+</script>
+
