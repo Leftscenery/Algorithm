@@ -19,14 +19,16 @@ function insertSort(arg){
 }
 
 function directInsertSort(ary){
-    console.time('直接插入排序：在本体内交换');
+    console.time('插入排序：直接插入，本体交换');
     for (let i = 0; i < ary.length-1; i++) {
         for (let j = i+1; j < ary.length; j++) {
             if(ary[j]<ary[i]){
-                [ary[i],ary[j]] = [ary[j],ary[i]]
+                let temp = ary[i];
+                ary[i] = ary[j];
+                ary[j] = temp;
             }
         }
     }
-    console.timeEnd('直接插入排序：在本体内交换');
+    console.timeEnd('插入排序：直接插入，本体交换');
     return ary
 }

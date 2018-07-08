@@ -7,7 +7,9 @@ function shellSort(ary) {
         for (let i = 0; i < ary.length - step; i+=step) {
             for(let j = i+step; j < ary.length; j+=step){
                 if(ary[i]>=ary[j]){
-                    [ary[i],ary[j]] = [ary[j],ary[i]]
+                    let temp = ary[i];
+                    ary[i] = ary[j];
+                    ary[j] = temp;
                 }
             }
         }

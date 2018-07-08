@@ -23,24 +23,26 @@
         for (let i = 0; i < n; i++) {
             ary.push(Math.floor(Math.random() * n) + 1)
         }
+        console.log(n+'个随机数排序');
+        console.log('----------------------------------');
         return function(){
             return [...ary]
-        }
-    }(10000));
+        };
+    }(50000));
 
-
-    console.log(BubbleSort(GetNewAry()));
-    console.log(selectionSort1(GetNewAry()));
-    console.log(selectionSort2(GetNewAry()));
-    console.log(insertSort(GetNewAry()));
-    console.log(directInsertSort(GetNewAry()));
-    console.log(mergeSort(GetNewAry()));
-    console.log(shellSort(GetNewAry()));
-    console.log(quickSort1(GetNewAry()));
-    console.log(quickSort2(GetNewAry()));
-    console.log(quickSort3(GetNewAry()));
-    console.log(randomQuickSort(GetNewAry()));
-    console.log(countingSort(GetNewAry()));
-    console.log(redixSorting(GetNewAry()));
+    BubbleSort(GetNewAry());
+    selectionSort1(GetNewAry());
+    selectionSort2(GetNewAry());
+    insertSort(GetNewAry());
+    directInsertSort(GetNewAry());
+    mergeSort(GetNewAry());
+    shellSort(GetNewAry());
+    quickSort1(GetNewAry());
+    quickSort2(GetNewAry());
+    quickSort3(GetNewAry());
+    randomQuickSort(GetNewAry());
+    countingSort(GetNewAry());
+    redixSorting(GetNewAry());
+    heapSort(GetNewAry());
 </script>
 

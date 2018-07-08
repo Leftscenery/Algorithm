@@ -29,7 +29,9 @@ function selectionSort2(arg) {
                 minIndex = j
             }
         }
-        [arg[minIndex],arg[i]]=[arg[i],arg[minIndex]];
+        var temp = arg[minIndex];
+        arg[minIndex] = arg[i];
+        arg[i] = temp;
     }
     console.timeEnd('选择排序：本数组交换');
     return arg

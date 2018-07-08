@@ -5,7 +5,9 @@ function BubbleSort(arg) {
     for (let i = 0; i < arg.length-1; i++) {
         for (let j = i+1; j < arg.length; j++) {
             if((arg[i]-arg[j])>=0){
-                [arg[i],arg[j]] = [arg[j],arg[i]];
+                let temp = arg[i];
+                arg[i] = arg[j];
+                arg[j] = temp;
             }
         }
     }

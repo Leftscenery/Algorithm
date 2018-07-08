@@ -41,7 +41,9 @@ function quickSort2(ary) {
         while(leftIndex-endIndex<=0){
             if(ary[leftIndex]-pivot<=0){
                 storeIndex == null ? storeIndex = pivotIndex+1 : storeIndex++;
-                [ary[storeIndex],ary[leftIndex]]=[ary[leftIndex],ary[storeIndex]]
+                let temp = ary[storeIndex];
+                ary[storeIndex] = ary[leftIndex];
+                ary[leftIndex] = temp;
             }
             leftIndex++;
         }
@@ -51,8 +53,12 @@ function quickSort2(ary) {
             realSort(ary,pivotIndex+1,endIndex);
         }else{
             //区间内有新排序，切分数组，前后分别继续排序，主轴固定
-            [ary[storeIndex],ary[pivotIndex]]=[ary[pivotIndex],ary[storeIndex]];
-            [pivotIndex,storeIndex] = [storeIndex,pivotIndex];
+            let temp = ary[storeIndex];
+            ary[storeIndex] = ary[pivotIndex];
+            ary[pivotIndex] = temp;
+            let temp1 = pivotIndex;
+            pivotIndex = storeIndex;
+            storeIndex = temp1;
             realSort(ary,storeIndex,pivotIndex-1);
             realSort(ary,pivotIndex+1,endIndex)
         }
@@ -73,7 +79,9 @@ function quickSort3(ary) {
         }
         //算法核心：取中间值
         var middle = Math.floor((endIndex-startIndex)/2)+startIndex;
-        [ary[middle],ary[startIndex]]=[ary[startIndex],ary[middle]];
+        let temp = ary[middle];
+        ary[middle] = ary[startIndex];
+        ary[startIndex] = temp;
         var pivot = ary[startIndex];
         var pivotIndex = startIndex;
         var leftIndex = pivotIndex+1;
@@ -83,7 +91,9 @@ function quickSort3(ary) {
         while(leftIndex-endIndex<=0){
             if(ary[leftIndex]-pivot<=0){
                 storeIndex == null ? storeIndex = pivotIndex+1 : storeIndex++;
-                [ary[storeIndex],ary[leftIndex]]=[ary[leftIndex],ary[storeIndex]]
+                let temp1 = ary[storeIndex];
+                ary[storeIndex] = ary[leftIndex];
+                ary[leftIndex] = temp1;
             }
             leftIndex++;
         }
@@ -93,8 +103,12 @@ function quickSort3(ary) {
             realSort(ary,pivotIndex+1,endIndex);
         }else{
             //区间内有新排序，切分数组，前后分别继续排序，主轴固定
-            [ary[storeIndex],ary[pivotIndex]]=[ary[pivotIndex],ary[storeIndex]];
-            [pivotIndex,storeIndex] = [storeIndex,pivotIndex];
+            let temp3 = ary[storeIndex];
+            ary[storeIndex] = ary[pivotIndex];
+            ary[pivotIndex] = temp3;
+            let temp4 = pivotIndex;
+            pivotIndex = storeIndex;
+            storeIndex = temp4;
             realSort(ary,storeIndex,pivotIndex-1);
             realSort(ary,pivotIndex+1,endIndex)
         }
@@ -113,7 +127,9 @@ function randomQuickSort(ary) {
         }
         //算法核心：取中间值
         var middle = Math.floor(Math.random()*(endIndex-startIndex))+startIndex;
-        [ary[middle],ary[startIndex]]=[ary[startIndex],ary[middle]];
+        let temp = ary[middle];
+        ary[middle] = ary[startIndex];
+        ary[startIndex] = temp;
         var pivot = ary[startIndex];
         var pivotIndex = startIndex;
         var leftIndex = pivotIndex+1;
@@ -123,7 +139,9 @@ function randomQuickSort(ary) {
         while(leftIndex-endIndex<=0){
             if(ary[leftIndex]-pivot<=0){
                 storeIndex == null ? storeIndex = pivotIndex+1 : storeIndex++;
-                [ary[storeIndex],ary[leftIndex]]=[ary[leftIndex],ary[storeIndex]]
+                let temp2 = ary[storeIndex];
+                ary[storeIndex] = ary[leftIndex];
+                ary[leftIndex] = temp2;
             }
             leftIndex++;
         }
@@ -133,14 +151,18 @@ function randomQuickSort(ary) {
             realSort(ary,pivotIndex+1,endIndex);
         }else{
             //区间内有新排序，切分数组，前后分别继续排序，主轴固定
-            [ary[storeIndex],ary[pivotIndex]]=[ary[pivotIndex],ary[storeIndex]];
-            [pivotIndex,storeIndex] = [storeIndex,pivotIndex];
+            let temp3 = ary[storeIndex];
+            ary[storeIndex] = ary[pivotIndex];
+            ary[pivotIndex] = temp3;
+            let temp4 = pivotIndex;
+            pivotIndex = storeIndex;
+            storeIndex = temp4;
             realSort(ary,storeIndex,pivotIndex-1);
             realSort(ary,pivotIndex+1,endIndex)
         }
     }
-    console.time('随机快速排序');
+    console.time('快速排序：随机快速排序');
     realSort(ary,0,ary.length-1);
-    console.timeEnd('随机快速排序');
+    console.timeEnd('快速排序：随机快速排序');
     return ary
 }
