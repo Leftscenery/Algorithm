@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="js/1_冒泡排序.js"></script>
-    <script src="js/2_选择排序.js"></script>
-    <script src="js/3_插入排序.js"></script>
-    <script src="js/4_希尔排序.js"></script>
-    <script src="js/5_归并排序.js"></script>
-    <script src="js/6_快速排序.js"></script>
-    <script src="js/7_计数排序_基数排序.js"></script>
-    <script src="js/8_堆排序.js"></script>
+    <title>sort_algorithm_js</title>
+    <script src="js/bubble.js"></script>
+    <script src="js/selection.js"></script>
+    <script src="js/insert.js"></script>
+    <script src="js/shell.js"></script>
+    <script src="js/merge.js"></script>
+    <script src="js/quick.js"></script>
+    <script src="js/count_redix.js"></script>
+    <script src="js/heap.js"></script>
 </head>
 <body>
 
@@ -23,12 +23,12 @@
         for (let i = 0; i < n; i++) {
             ary.push(Math.floor(Math.random() * n) + 1)
         }
-        console.log(n+'个随机数排序');
-        console.log('----------------------------------');
+        console.log(n+'random number');
+        console.log('---');
         return function(){
             return [...ary]
         };
-    }(50000));              // <------ Change test amount here
+    }(100000));              // <------ Change test amount here
 
     BubbleSort(GetNewAry());
     selectionSort1(GetNewAry());

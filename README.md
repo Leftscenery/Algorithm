@@ -14,3 +14,4 @@ This collection including 8 common Algorithm by using JavaScript
 
 View performance in console.
 Feel free to let me know if you have better thought or solution for specific Sorting Algorithm :)
+<br>By Jiawei Zhou 2018

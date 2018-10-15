@@ -1,6 +1,6 @@
 //计数排序：应用于不大的数字，把数字做为index，每监测到一个就++，然后按顺序输出
 function countingSort(ary) {
-    console.time('计数排序');
+    console.time('counting');
     let resultMark = [];
     let final = [];
     for (let i = 0; i < ary.length; i++) {
@@ -12,7 +12,7 @@ function countingSort(ary) {
             resultMark[i]--;
         }
     }
-    console.timeEnd("计数排序");
+    console.timeEnd("counting");
     return final
 }
 
@@ -21,7 +21,7 @@ function countingSort(ary) {
 
 //基数排序：先通过个位比，放到0-9桶里面，然后把0-9桶按从小到大合成一个数组。然后把这个数组里面每对象按照十位排序，不断迭代直到到达最后一位。
 function redixSorting(ary) {
-    console.time('基数排序');
+    console.time('redix');
     var currentMod = 0;
     var tempAry = [];
     var combinedAry = [...ary];
@@ -53,6 +53,6 @@ function redixSorting(ary) {
             }
         }
     }
-    console.timeEnd('基数排序');
+    console.timeEnd('redix');
     return combinedAry;
 }

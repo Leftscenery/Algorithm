@@ -1,9 +1,9 @@
 //归并排序：把两边不断分割，直到两个成组，然后再合起来
 
 function mergeSort(arg){
-    console.time('归并排序');
+    console.time('merge');
     var result = innerMergeSort(arg);
-    console.timeEnd('归并排序');
+    console.timeEnd('merge');
     return result
 }
 

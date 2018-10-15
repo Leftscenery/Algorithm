@@ -19,9 +19,9 @@ function quickSort1(ary) {
         }
         return realSort(left).concat(pivot,realSort(right))
     }
-    console.time('快速排序：建立新数组不断插入组合');
+    console.time('quick: new array');
     var output = realSort(ary);
-    console.timeEnd('快速排序：建立新数组不断插入组合');
+    console.timeEnd('quick: new array');
     return output
 }
 
@@ -65,9 +65,9 @@ function quickSort2(ary) {
 
 
     }
-    console.time('快速排序：中轴为第一个');
+    console.time('quick：first as pivot');
     realSort(ary,0,ary.length-1);
-    console.timeEnd('快速排序：中轴为第一个');
+    console.timeEnd('quick：first as pivot');
     return ary
 }
 
@@ -113,9 +113,9 @@ function quickSort3(ary) {
             realSort(ary,pivotIndex+1,endIndex)
         }
     }
-    console.time('快速排序：中轴为中间值');
+    console.time('quick: center pivot');
     realSort(ary,0,ary.length-1);
-    console.timeEnd('快速排序：中轴为中间值');
+    console.timeEnd('quick: center pivot');
     return ary
 }
 
@@ -161,8 +161,8 @@ function randomQuickSort(ary) {
             realSort(ary,pivotIndex+1,endIndex)
         }
     }
-    console.time('快速排序：随机快速排序');
+    console.time('quick: random');
     realSort(ary,0,ary.length-1);
-    console.timeEnd('快速排序：随机快速排序');
+    console.timeEnd('quick: random');
     return ary
 }

@@ -41,7 +41,7 @@ function sortChildTree(ary,currentNode, endMark) {
 
 
 function heapSort(ary) {
-    console.time('堆排序：大顶堆');
+    console.time('head: big');
     //构建最大堆
     makeMaxHeap(ary);
     //堆排序，动哪个，调哪个
@@ -51,6 +51,6 @@ function heapSort(ary) {
         ary[i] = temp;
         sortChildTree(ary,0,i);
     }
-    console.timeEnd('堆排序：大顶堆');
+    console.timeEnd('head: big');
     return ary;
 }

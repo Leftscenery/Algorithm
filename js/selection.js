@@ -2,7 +2,7 @@
 
 //添加思想
 function selectionSort1(arg) {
-    console.time('选择排序：添加到新数组');
+    console.time('selection: to new array');
     let result=[];
     while(arg.length > 0){
         let min = arg[0];
@@ -14,13 +14,13 @@ function selectionSort1(arg) {
         arg.splice(arg.indexOf(min),1);
         result.push(min);
     }
-    console.timeEnd('选择排序：添加到新数组');
+    console.timeEnd('selection: to new array');
     return result
 }
 
 //交换思想
 function selectionSort2(arg) {
-    console.time('选择排序：本数组交换');
+    console.time('selection: same array exchange');
     let minIndex = 0;
     for(let i=0;i<arg.length-1;i++){
         minIndex = i;
@@ -33,6 +33,6 @@ function selectionSort2(arg) {
         arg[minIndex] = arg[i];
         arg[i] = temp;
     }
-    console.timeEnd('选择排序：本数组交换');
+    console.timeEnd('selection: same array exchange');
     return arg
 }
